@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /*文字サイズを10pxに設定 */
+  font-size: 62.5%;
+}
+
+body {
+  /*フォントサイズを1.6em（16px）に設定 */
+  font-size: 1.6em;
+  text-align: center;
+  width: 1920px;
+  margin: 0 auto;
+  max-width: 100%;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", sans-serif;
+  /*border: 0.5rem solid orange;*/
+}
+
+.title{
+  font-size: 3.2em;
+}

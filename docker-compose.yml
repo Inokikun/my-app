@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./docker/php
+    volumes:
+      - ./backend:/var/www
+    working_dir: /var/www
+    command: sleep infinity
+    ports:
+      - "8000:8000"
+      - "5173:5173"   # ← これが無いと絶対に繋がらない
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
