@@ -37,6 +37,7 @@ export default defineConfig({
         'resources/css/app.css',
         'resources/js/top_app.ts',
         'resources/js/login_app.ts',
+        'resources/js/entry.js'
       ],
       refresh: true,
     }),
