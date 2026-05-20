@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 import Home from './pages/Home.vue';
-import '../css/app.css';
 
 //①vueをbladeへマウント:HTML属性で値を渡す
 const el = document.getElementById('app')
