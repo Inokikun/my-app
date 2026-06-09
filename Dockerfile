@@ -22,7 +22,7 @@ COPY backend/docker/nginx/default.conf /etc/nginx/sites-available/default
 
 ENV PORT=10000
 
-# 👇 ここ変更
+# 👇 ここ変更　うんこ
 COPY backend/docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
