@@ -2,6 +2,9 @@
 
 echo "🚀 Starting Laravel..."
 
+chown -R www-data:www-data storage bootstrap/cache
+chmod -R 775 storage bootstrap/cache
+
 # キャッシュクリア（安全）
 php artisan config:clear
 php artisan cache:clear
