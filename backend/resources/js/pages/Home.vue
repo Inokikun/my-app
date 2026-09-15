@@ -37,6 +37,7 @@
 
   const aaa:string = "takano";
   const b: string = "1";
+  const c: string = "1";
   let age: number = 100;
   alert("TypeScriptからアラート出力")
   console.log("TypeScriptからブラウザの開発者ツールのconsoleに出力");
