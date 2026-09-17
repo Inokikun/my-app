@@ -4,7 +4,6 @@
     "type": "module",
     "scripts": {
         "dev": "vue-tsc --noEmit && vite",
-        "build": "vue-tsc --noEmit && vite build",
         "type-check": "vue-tsc --noEmit"
     },
     "devDependencies": {
