@@ -1,14 +1,6 @@
 #!/bin/sh
 set -e
 
-echo "⏳ Waiting for database..."
-# DB_HOST と DB_PORT が利用可能になるまで 1秒ごとにチェック
-# nc (netcat) を使って接続を確認します
-until nc -z -v -w3 "$DB_HOST" "${DB_PORT:-5432}"; do
-  echo "Database is unavailable - waiting..."
-  sleep 1
-done
-
 echo "🚀 Starting Laravel (No Nginx)..."
 
 # キャッシュクリア
