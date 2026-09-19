@@ -3,14 +3,14 @@ set -e
 
 echo "🚀 Starting Laravel (No Nginx)..."
 
+# マイグレーション
+php artisan migrate --force
+
 # キャッシュクリア
 php artisan config:clear
 php artisan cache:clear
 php artisan route:clear
 php artisan view:clear
-
-# マイグレーション
-php artisan migrate --force
 
 # キャッシュ再生成（ここが重要）
 php artisan config:cache
