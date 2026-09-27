@@ -13,7 +13,7 @@
     表示されています!
   </p>
 
-  <h1 class="main-ttl">vue3、typescript、Laravel、mySQLを使ったWebアプリケーション</h1>
+  <h1 class="main-ttl">vue3、typescript、Laravel、mySQLを使ったWebアプリケーションfeature/func1ブランチ</h1>
     <nav class="nav">
       <div class="other-page-link">
         <ul>
