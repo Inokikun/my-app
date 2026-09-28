@@ -348,6 +348,14 @@ vite.config.js内のinputの所に'resources/js/entry.js'を追記する-->
           return;
         }
 
+        // メールアドレスの形式が不正なら
+        // 重複チェックAPIを呼ばない
+        // file:///C:/Users/owner/Desktop/vue.js,TypeScript,Laravel,docker/reference_file/14.docx
+        if (fieldId === 'email' && !input.validity.valid) {
+          errorDiv.textContent = '';
+          return;
+        }
+
         // 両方の値を取得してAPIに渡す
         const nameValue = document.getElementById('name').value.trim();
         const emailValue = document.getElementById('email').value.trim();
@@ -357,7 +365,7 @@ vite.config.js内のinputの所に'resources/js/entry.js'を追記する-->
         errorDiv.textContent = ''; // エラー初期化
 
         if (result === null) {
-          errorDiv.textContent = 'サーバーとの通信に失敗しましたfeature/func1ブランチ';
+          errorDiv.textContent = 'サーバーとの通信に失敗しましたfeature/func2ブランチ';
           return;
         }
 
