@@ -7,6 +7,8 @@ use App\Rules\EmailRule;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/*新奇アカウント作成の時のバリデーション*/
+// file:///C:/Users/owner/Desktop/vue.js,TypeScript,Laravel,docker/reference_file/1.docx
 class StoreUserRequest extends FormRequest
 {
     public function authorize(): bool

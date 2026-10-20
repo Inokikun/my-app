@@ -12,7 +12,7 @@ class LoginRequest extends FormRequest
         return true; // ログインは誰でも試せるので true
     }
 
-    public function rules()
+    public function rules(): array
     {
       // file:///C:/Users/owner/Desktop/vue.js,TypeScript,Laravel,docker/reference_file/11.docx
       return [

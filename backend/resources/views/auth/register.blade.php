@@ -365,7 +365,7 @@ vite.config.js内のinputの所に'resources/js/entry.js'を追記する-->
         errorDiv.textContent = ''; // エラー初期化
 
         if (result === null) {
-          errorDiv.textContent = 'サーバーとの通信に失敗しましたfeature/func2ブランチ';
+          errorDiv.textContent = 'サーバーとの通信に失敗しました';
           return;
         }
 

@@ -5,6 +5,7 @@ namespace App\Actions\User;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
+/*データベースにユーザー名、パスワード、メールアドレスを登録*/
 class CreateUser
 {
     //AccountControllerからこの関数が呼ばれるので

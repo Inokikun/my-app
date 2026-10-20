@@ -37,3 +37,8 @@ Route::prefix('login')->name('login.')->group(function () {
     require __DIR__ . '/login/form.php';
     require __DIR__ . '/login/process.php';
 });
+
+Route::prefix('images')->name('images.')->group(function () {
+    require __DIR__ . '/images/form.php';
+    require __DIR__ . '/images/store.php';
+});

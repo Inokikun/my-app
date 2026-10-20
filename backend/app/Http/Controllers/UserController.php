@@ -21,6 +21,10 @@ use Illuminate\Support\Facades\DB;
     }
 }*/
 
+/*重複チェックの時のバリデーション、
+FormRequest(自動バリデーション)だとやりすぎなので、
+$request->validate() の手動バリデーション*/
+// file:///C:/Users/owner/Desktop/vue.js,TypeScript,Laravel,docker/reference_file/1.docx
 class UserController extends Controller
 {
 

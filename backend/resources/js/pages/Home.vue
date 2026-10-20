@@ -13,19 +13,19 @@
     表示されています!
   </p>
 
-  <h1 class="main-ttl">vue3、typescript、Laravel、mySQLを使ったWebアプリケーションfeature/func2ブランチ</h1>
+  <h1 class="main-ttl">vue3、typescript、Laravel、mySQLを使ったWebアプリケーションfeature/func3ブランチ</h1>
     <nav class="nav">
       <div class="other-page-link">
         <ul>
           <li><a href='/login'>ログイン</a></li>
 
-          <!-- ①vueをbladeへマウント:HTML属性で値を渡す　-->
-          <li><a :href="signupUrl">HTML属性で値を渡すでの新規アカウント作成</a></li>
+          <!-- ①vueをbladeへマウント:HTML属性で値を渡す
+          <li><a :href="signupUrl">HTML属性で値を渡すでの新規アカウント作成</a></li> -->
 
-          <!-- ②vueをbladeへマウント:routeUrlsで値を渡す
-          <li><a :href="routeUrls.signupUrl">routeUrlsで値を渡すでの新規アカウント作成</a></li>　-->
+          <!-- ②vueをbladeへマウント:routeUrlsで値を渡す-->
+          <li><a :href="routeUrls.signupUrl">routeUrlsで値を渡すでの新規アカウント作成</a></li>
         </ul>
-          <!-- <p>{{ error_message }}</p> -->
+          <!-- <p>{{ error_message }}</p>-->
       </div>
     </nav>
 </template>
@@ -57,12 +57,12 @@
     alert("onMounted")
     })
 
-  {{ /*  ①vueをbladeへマウント:HTML属性で値を渡す */ }}
+  {{ /*  ①vueをbladeへマウント:HTML属性で値を渡す
   const props = defineProps<{signupUrl : string }>()
-  alert(props.signupUrl)
+  alert(props.signupUrl) */ }}
 
-  {{ /*  ②vueをbladeへマウント:routeUrlsで値を渡す
-  const routeUrls = window.routeUrls; */ }}
+  {{ /*  ②vueをbladeへマウント:routeUrlsで値を渡す */ }}
+  const routeUrls = window.routeUrls; 
 </script>
 
 <style scoped>

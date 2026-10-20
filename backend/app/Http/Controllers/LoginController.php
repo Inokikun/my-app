@@ -11,6 +11,7 @@ use App\Http\Requests\LoginRequest;
 
 class LoginController  extends Controller
 {
+    // file:///C:/Users/owner/Desktop/vue.js,TypeScript,Laravel,docker/reference_file/16.docx
     public function showLoginForm()
     {
         \Log::info('LoginController.phpのshowLoginFormメソッド発火');
@@ -39,9 +40,10 @@ class LoginController  extends Controller
 
         // 成功時のリダイレクト
         // file:///C:/Users/owner/Desktop/vue.js,TypeScript,Laravel,docker/reference_file/8.docx
-        //return redirect()->intended('/dashboard');
         \Log::info('ログイン成功');
-        return view('home.aaa');
+        //return redirect()->intended('/images');
+        //return view('home.aaa');
+        return redirect()->route('images.form');
       }
 
       // 認証失敗時
