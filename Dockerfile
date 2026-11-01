@@ -5,7 +5,9 @@ WORKDIR /app
 
 COPY backend/package*.json ./
 
-RUN npm install -g npm@12.2.1
+RUN npm install -g npm@12.2.1 \
+    && node -v \
+    && npm -v
 
 COPY backend/ .
 
@@ -28,6 +30,9 @@ COPY backend/ .
 
 # Composer 2.10.3を使用
 COPY --from=composer:2.10.3 /usr/bin/composer /usr/bin/composer
+
+RUN php -v \
+    && composer --version
 
 RUN composer install --no-dev --optimize-autoloader
 
