@@ -23,10 +23,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     libzip-dev \
     libpq-dev \
-    && docker-php-ext-install pdo_pgsql zip \
-    && nginx -v 2>&1 \
-    && apt-cache policy nginx \
-    && cat /etc/os-release
+    && docker-php-ext-install pdo_pgsql zip
 
 WORKDIR /var/www
 
