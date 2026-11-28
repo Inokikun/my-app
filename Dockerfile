@@ -5,19 +5,18 @@ WORKDIR /app
 
 COPY backend/package*.json ./
 
-RUN npm install -g npm@12.2.1 \
-    && node -v \
-    && npm -v
+RUN npm install -g npm@12.2.1
 
 COPY backend/ .
 
 RUN npm install && npm run build
 
 
-# PHP
+# PHP + Nginx
 FROM php:8.4.28-fpm
 
 RUN apt-get update && apt-get install -y \
+    nginx \
     git \
     unzip \
     libzip-dev \
@@ -31,20 +30,20 @@ COPY backend/ .
 # Composer 2.10.3を使用
 COPY --from=composer:2.10.3 /usr/bin/composer /usr/bin/composer
 
-RUN php -v \
-    && composer --version
-
 RUN composer install --no-dev --optimize-autoloader
 
 # Node.js側で作ったビルド済みファイルをコピー
 COPY --from=node-builder /app/public/build ./public/build
 
-# キャッシュはbuildでやらない
 RUN chmod -R 775 storage bootstrap/cache
 
-# entrypoint
-COPY entrypoint.sh /entrypoint.sh
+# Nginx設定
+COPY backend/docker/nginx/default.conf /etc/nginx/sites-available/default
 
+ENV PORT=10000
+
+# entrypoint
+COPY backend/docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/entrypoint.sh"]
