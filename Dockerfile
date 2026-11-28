@@ -15,7 +15,7 @@ RUN npm install && npm run build
 
 
 # PHP
-FROM php:8.4.27-fpm
+FROM php:8.4.28-fpm
 
 RUN apt-get update && apt-get install -y \
     git \
